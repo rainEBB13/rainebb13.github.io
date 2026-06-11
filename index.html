@@ -178,30 +178,35 @@
     </div>
   </footer>
 
-  <!-- Dark mode toggle — no dependencies -->
+  <!-- Theme toggle: cycles light → dark → system. Button shows current mode. -->
   <script>
     (function () {
       var toggle = document.getElementById('theme-toggle');
-      var html = document.documentElement;
-      var saved = localStorage.getItem('theme');
-      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var html   = document.documentElement;
+      var mq     = window.matchMedia('(prefers-color-scheme: dark)');
+      var cycle  = ['light', 'dark', 'system'];
 
-      if (saved === 'dark' || (!saved && prefersDark)) {
-        html.setAttribute('data-theme', 'dark');
-        toggle.textContent = 'light';
+      function apply(mode) {
+        var dark = mode === 'dark' || (mode === 'system' && mq.matches);
+        dark ? html.setAttribute('data-theme', 'dark')
+             : html.removeAttribute('data-theme');
+        toggle.textContent = mode;
       }
 
+      // Default: light (ignore system preference unless user explicitly picks system)
+      var saved = localStorage.getItem('theme') || 'light';
+      apply(saved);
+
       toggle.addEventListener('click', function () {
-        var isDark = html.getAttribute('data-theme') === 'dark';
-        if (isDark) {
-          html.removeAttribute('data-theme');
-          toggle.textContent = 'dark';
-          localStorage.setItem('theme', 'light');
-        } else {
-          html.setAttribute('data-theme', 'dark');
-          toggle.textContent = 'light';
-          localStorage.setItem('theme', 'dark');
-        }
+        var current = localStorage.getItem('theme') || 'light';
+        var next = cycle[(cycle.indexOf(current) + 1) % cycle.length];
+        localStorage.setItem('theme', next);
+        apply(next);
+      });
+
+      // React to OS theme changes when in system mode
+      mq.addEventListener('change', function () {
+        if ((localStorage.getItem('theme') || 'light') === 'system') apply('system');
       });
     }());
   </script>
