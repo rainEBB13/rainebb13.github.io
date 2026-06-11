@@ -97,7 +97,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.25rem;
+}
+
+.headshot {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  flex-shrink: 0;
 }
 
 .header-identity {
@@ -342,6 +351,16 @@ footer {
 
   h1 {
     font-size: 1.4rem;
+  }
+
+  /* Photo stacks above name on small screens */
+  .header-top {
+    flex-wrap: wrap;
+  }
+
+  .headshot {
+    width: 72px;
+    height: 72px;
   }
 
   .entry-header {
