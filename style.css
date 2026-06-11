@@ -1,0 +1,365 @@
+/* ============================================================
+   COLOR TOKENS
+   All theme values live here. Both modes share one property
+   set — toggled via [data-theme="dark"] on <html>.
+============================================================ */
+
+:root {
+  --bg:     #ffffff;
+  --text:   #111111;
+  --text-2: #555555;   /* subtitles, descriptions */
+  --text-3: #999999;   /* dates, section labels, muted */
+  --accent: #0055cc;   /* links only */
+  --border: #e0e0e0;
+}
+
+[data-theme="dark"] {
+  --bg:     #111111;
+  --text:   #e8e8e8;
+  --text-2: #aaaaaa;
+  --text-3: #606060;
+  --accent: #66aaff;
+  --border: #2a2a2a;
+}
+
+
+/* ============================================================
+   RESET & BASE
+============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.65;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 4rem;
+}
+
+
+/* ============================================================
+   TYPOGRAPHY & LINKS
+============================================================ */
+
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+p, li {
+  font-size: 0.9375rem; /* 15px */
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+code {
+  font-family: "SFMono-Regular", Menlo, Consolas, "Liberation Mono",
+               "Courier New", monospace;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+header {
+  margin-bottom: 3rem;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.header-identity {
+  flex: 1;
+  min-width: 0;
+}
+
+h1 {
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+  color: var(--text);
+}
+
+.tagline {
+  font-size: 0.875rem;
+  color: var(--text-2);
+  margin-bottom: 0.85rem;
+  line-height: 1.5;
+}
+
+.header-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+.theme-toggle {
+  flex-shrink: 0;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-3);
+  font-family: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: color 0.15s, border-color 0.15s;
+  margin-top: 0.15rem;
+}
+
+.theme-toggle:hover {
+  color: var(--text-2);
+  border-color: var(--text-3);
+}
+
+
+/* ============================================================
+   SECTIONS — shared structure
+============================================================ */
+
+section {
+  margin-bottom: 2.75rem;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+  color: var(--text-3);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.45rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/* ============================================================
+   BIO
+============================================================ */
+
+#bio p {
+  color: var(--text-2);
+  line-height: 1.75;
+}
+
+
+/* ============================================================
+   ENTRY ROWS
+   Used by Research, Projects, Experience, Education.
+   Header row: title/sub on left, date pinned right.
+============================================================ */
+
+.entry {
+  margin-bottom: 1.75rem;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry.compact {
+  margin-bottom: 1.25rem;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.entry-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.entry-sub {
+  font-size: 0.8125rem;
+  color: var(--text-2);
+  margin-top: 0.15rem;
+  line-height: 1.4;
+}
+
+.date {
+  font-size: 0.8125rem;
+  color: var(--text-3);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding-top: 0.1rem;
+}
+
+.entry-desc {
+  font-size: 0.875rem;
+  color: var(--text-2);
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.65;
+}
+
+.entry-bullets {
+  font-size: 0.875rem;
+  color: var(--text-2);
+  padding-left: 1.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.entry-bullets li {
+  margin-bottom: 0.3rem;
+  line-height: 1.6;
+}
+
+.entry-link {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+
+/* ============================================================
+   PROJECT TECH TAGS
+   Monospace, no background, dot-separated visually via gap.
+============================================================ */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.tags code {
+  font-size: 0.75rem;
+  color: var(--text-3);
+}
+
+
+/* ============================================================
+   SKILLS LINE
+============================================================ */
+
+.skills-line code {
+  font-size: 0.8125rem;
+  color: var(--text-2);
+  line-height: 1.9;
+}
+
+
+/* ============================================================
+   TODO PLACEHOLDERS
+   Visible in-page reminders for content still to be filled in.
+============================================================ */
+
+.todo {
+  color: var(--text-3);
+  font-style: italic;
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--text-3);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-links a {
+  color: var(--text-3);
+  font-size: 0.8125rem;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+
+/* ============================================================
+   RESPONSIVE — mobile (≤ 560px)
+   Dates drop below title. Header links stack. Footer centers.
+============================================================ */
+
+@media (max-width: 560px) {
+  body {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .entry-header {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .date {
+    order: 3;
+  }
+
+  .header-links {
+    gap: 0.3rem 1rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rainne Busque — Data Science undergraduate researcher at Arizona State University">
+  <title>Rainne Busque</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-top">
+      <div class="header-identity">
+        <h1>Rainne Busque</h1>
+        <p class="tagline">Data Science (Math track) @ ASU &middot; Undergraduate researcher &middot; I like making machines rediscover math.</p>
+        <nav class="header-links" aria-label="Contact and profiles">
+          <a href="mailto:rbusque@asu.edu">rbusque@asu.edu</a>
+          <a href="https://github.com/rainEBB13" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/rainne-eliot-busque-6ab6a9375/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">dark</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- BIO -->
+    <section id="bio" aria-label="About">
+      <p>I&rsquo;m a Data Science undergrad at Arizona State University on the mathematics track, currently
+      doing research on how statistical learning can rediscover classical mathematical formulas
+      straight from numerical data. I&rsquo;m most interested in the spot where applied math, ML, and
+      real systems overlap &mdash; sparse regression, dynamical systems, and the linear-algebra machinery
+      underneath modern ML. Outside the research I build things to understand them: vision pipelines,
+      prediction models, and the occasional pointless-but-satisfying project like rendering a spinning
+      3D donut in a terminal. Currently looking for <span class="todo">[internships / research opportunities in ML &amp; data science]</span>.</p>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" aria-labelledby="label-research">
+      <h2 class="section-label" id="label-research">research</h2>
+
+      <article class="entry">
+        <div class="entry-header">
+          <div>
+            <p class="entry-title">Learning Mathematics Through the Machine</p>
+            <p class="entry-sub">Undergraduate Research Assistant &middot; ASU OURS &middot; Dr. Jimmie Adriazola (NSF ASCEND Fellow)</p>
+          </div>
+          <span class="date">May &ndash; Jul. 2026</span>
+        </div>
+        <p class="entry-desc">Using statistical learning to rediscover classical mathematical formulas from raw numerical data &mdash; can an algorithm look at data and recover the equation that generated it?</p>
+        <ul class="entry-bullets">
+          <li>Implemented and analyzed SINDy (Sparse Identification of Nonlinear Dynamics) and sparse regression pipelines in Python and MATLAB.</li>
+          <li>Applied symbolic regression and numerical methods (including Euler&rsquo;s method) to recover differential-equation structure from data.</li>
+          <li>Built up the linear-algebra foundations that these ML methods actually run on.</li>
+        </ul>
+        <p class="entry-link"><span class="todo">[TODO: link to GitHub repo or writeup]</span></p>
+      </article>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" aria-labelledby="label-projects">
+      <h2 class="section-label" id="label-projects">projects</h2>
+
+      <article class="entry">
+        <div class="entry-header">
+          <p class="entry-title">Philippine Housing Prices Prediction <span class="todo">[TODO: add repo link ↗]</span></p>
+          <span class="date">2026</span>
+        </div>
+        <p class="entry-desc">Supervised regression model predicting residential housing prices in the Philippines from real estate data. <span class="todo">[TODO: add best metric &mdash; R&sup2;, RMSE, or % over baseline]</span></p>
+        <div class="tags">
+          <code>Python</code><code>scikit-learn</code><code>pandas</code><code>NumPy</code>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-header">
+          <p class="entry-title">Computer Vision Pipeline <span class="todo">[TODO: add repo link ↗]</span></p>
+          <span class="date">2025</span>
+        </div>
+        <p class="entry-desc">Real-time object-detection pipeline built on YOLOv8 with custom OpenCV preprocessing. <span class="todo">[TODO: what did it detect / why did you build it?]</span></p>
+        <div class="tags">
+          <code>Python</code><code>YOLOv8</code><code>OpenCV</code>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-header">
+          <p class="entry-title">Terminal Spinning Donut Renderer <span class="todo">[TODO: add repo link ↗]</span></p>
+          <span class="date">2025</span>
+        </div>
+        <p class="entry-desc">The classic ASCII spinning donut, re-implemented with NumPy-vectorized math for 3D rotation and projection &mdash; rendered live in the terminal.</p>
+        <div class="tags">
+          <code>Python</code><code>NumPy</code>
+        </div>
+      </article>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" aria-labelledby="label-experience">
+      <h2 class="section-label" id="label-experience">experience</h2>
+
+      <article class="entry compact">
+        <div class="entry-header">
+          <div>
+            <p class="entry-title">Hackathon Participant &mdash; NutriWell</p>
+            <p class="entry-sub">Project Humanities Hackathon</p>
+          </div>
+          <span class="date">Aug. 2025</span>
+        </div>
+        <p class="entry-desc">Built a web app connecting food-insecure people to nearby donation centers and donors; focused on accessible UX and real social impact under hackathon time pressure.</p>
+      </article>
+
+      <article class="entry compact">
+        <div class="entry-header">
+          <div>
+            <p class="entry-title">DataFest Competitor</p>
+            <p class="entry-sub">ASU Devil Data Club</p>
+          </div>
+          <span class="date">Spring 2026</span>
+        </div>
+        <p class="entry-desc">Analyzed a complex healthcare-infrastructure dataset under time pressure on a competitive team; ran EDA to surface hidden patterns in the data.</p>
+      </article>
+
+      <article class="entry compact">
+        <div class="entry-header">
+          <div>
+            <p class="entry-title">Fitness Team Member</p>
+            <p class="entry-sub">Planet Fitness, Tempe AZ</p>
+          </div>
+          <span class="date">2026 &ndash; Present</span>
+        </div>
+        <p class="entry-desc">Consistent member service while balancing a full academic and research schedule.</p>
+      </article>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" aria-labelledby="label-skills">
+      <h2 class="section-label" id="label-skills">skills</h2>
+      <p class="skills-line">
+        <code>Python &middot; Java &middot; JavaScript &middot; LaTeX &middot; scikit-learn &middot; pandas &middot; NumPy &middot; Matplotlib &middot; Plotly &middot; YOLOv8 &middot; OpenCV &middot; SINDy &middot; Sparse Regression &middot; Symbolic Regression &middot; Git/GitHub &middot; Jupyter &middot; VS&nbsp;Code &middot; Vim &middot; tmux &middot; Arduino &middot; Linux/macOS</code>
+      </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" aria-labelledby="label-education">
+      <h2 class="section-label" id="label-education">education</h2>
+
+      <article class="entry">
+        <div class="entry-header">
+          <div>
+            <p class="entry-title">Arizona State University, Tempe AZ</p>
+            <p class="entry-sub">B.S. Data Science (Mathematics Track)</p>
+          </div>
+          <span class="date">Aug. 2024 &ndash; May 2029</span>
+        </div>
+        <ul class="entry-bullets">
+          <li>Dean&rsquo;s Scholarship recipient</li>
+          <li>Coursework: Linear Algebra, Calculus II, Data Structures, Intro to Machine Learning</li>
+          <li>Clubs: Devil Data Club &middot; Google Developer Club &middot; Philippine American Student Association (Culture Chair, 2026&ndash;2027)</li>
+        </ul>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span>Rainne Busque &middot; 2026</span>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="https://github.com/rainEBB13" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="mailto:rbusque@asu.edu">Email</a>
+        <a href="https://www.linkedin.com/in/rainne-eliot-busque-6ab6a9375/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Dark mode toggle — no dependencies -->
+  <script>
+    (function () {
+      var toggle = document.getElementById('theme-toggle');
+      var html = document.documentElement;
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        html.setAttribute('data-theme', 'dark');
+        toggle.textContent = 'light';
+      }
+
+      toggle.addEventListener('click', function () {
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+          html.removeAttribute('data-theme');
+          toggle.textContent = 'dark';
+          localStorage.setItem('theme', 'light');
+        } else {
+          html.setAttribute('data-theme', 'dark');
+          toggle.textContent = 'light';
+          localStorage.setItem('theme', 'dark');
+        }
+      });
+    }());
+  </script>
+
+</body>
+</html>
