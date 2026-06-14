@@ -1,0 +1,197 @@
+%-------------------------
+% Resume for Rainne — ML/DS/Internship Focus
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Rainne Busque} \\ \vspace{4pt}
+    \small Phoenix, AZ $|$
+    \href{mailto:your.email@asu.edu}{\underline{rbusque@asu.edu}} $|$
+    \href{https://linkedin.com/in/yourprofile}{\underline{https://tinyurl.com/3aupbmb6}} $|$
+    \href{https://github.com/rainEBB13}{\underline{github.com/rainEBB13}} $|$
+    \href{https://rainebb13.github.io}{\underline{rainebb13.github.io}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Arizona State University}{Tempe, AZ}
+      {Bachelor of Science in Data Science (Mathematics Track)}{Aug. 2025 -- May 2029}
+      \resumeItemListStart
+        \resumeItem{Dean's Scholarship Recipient}
+        \resumeItem{Relevant Coursework: Linear Algebra, Calculus II (MAT266), Data Structures, Introduction to Machine Learning}
+        \resumeItem{Organizations: Devil Data Club, Google Developer Club, Philippine American Student Association (Culture Chair)}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Undergraduate Research Assistant}{May 2026 -- Jul. 2026}
+      {ASU OURS --- Dr. Jimmie Adriazola (NSF ASCEND Fellow)}{Remote}
+      \resumeItemListStart
+        \resumeItem{Contributed to \textit{Learning Mathematics Through the Machine}, a research project using statistical learning to rediscover classical mathematical formulas from numerical data}
+        \resumeItem{Implemented and analyzed Sparse Identification of Nonlinear Dynamics (SINDy) and sparse regression pipelines in Python and MATLAB}
+        \resumeItem{Applied symbolic regression and numerical methods including Euler's method to recover differential equation structure from data}
+        \resumeItem{Developed understanding of linear algebra foundations underpinning modern ML algorithms through active research application}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Hackathon Participant --- NutriWell}{Aug. 2025}
+      {Project Humanities Hackathon}{}
+      \resumeItemListStart
+        \resumeItem{Built a web app connecting food-insecure individuals to nearby donation centers and donors as part of a team}
+        \resumeItem{Focused on accessible UX design and real-world social impact; developed under time-constrained hackathon conditions}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {DataFest Competitor}{Spring 2026}
+      {ASU Devil Data Club}{}
+      \resumeItemListStart
+        \resumeItem{Analyzed a complex healthcare infrastructure dataset under time pressure as part of a competitive data analytics team}
+        \resumeItem{Performed Exploratory Data Analysis (EDA) to uncover hidden patterns within the dataset.}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {Member Services Representative}{2026 -- Present}
+      {Planet Fitness}{Tempe, AZ}
+      \resumeItemListStart
+        \resumeItem{Delivered consistent member service while managing time effectively alongside a full academic and research schedule}
+      \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{Philippine Housing Prices Prediction} $|$ \emph{Python, scikit-learn, pandas, NumPy}}{2026}
+          \resumeItemListStart
+            \resumeItem{Built a supervised Decision Tree regression model to predict residential housing prices in the Philippines using 1,500 real estate listings}
+            \resumeItem{Performed data cleaning, log transformation to address price skewness, and exploratory analysis to identify key price drivers}
+            \resumeItem{Evaluated model using Mean Absolute Error; identified location encoding as a key missing feature and documented findings publicly on Reddit}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Computer Vision Pipeline} $|$ \emph{Python, YOLOv8, OpenCV}}{2025}
+          \resumeItemListStart
+            \resumeItem{Built an object detection pipeline using YOLOv8 for real-time inference; implemented custom preprocessing with OpenCV}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Terminal Spinning Donut Renderer} $|$ \emph{Python, NumPy}}{2025}
+          \resumeItemListStart
+            \resumeItem{Re-implemented the classic ASCII donut renderer using NumPy vectorized math for 3D rotation projection in the terminal}
+          \resumeItemListEnd
+
+
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Java, JavaScript, \LaTeX} \\
+     \textbf{ML \& Data Science}{: scikit-learn, pandas, NumPy, Matplotlib, Plotly, YOLOv8, OpenCV} \\
+     \textbf{Methods}{: SINDy, Sparse Regression, Symbolic Regression, Supervised Learning, Decision Trees, Euler's Method} \\
+     \textbf{Tools \& Platforms}{: Git/GitHub, Jupyter Notebook, VS Code, Vim, tmux, Arduino, Linux/macOS}
+    }}
+ \end{itemize}
+
+%-----------LEADERSHIP & ACTIVITIES-----------
+\section{Leadership \& Activities}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Culture Chair}{2026 -- 2027}
+      {Philippine American Student Association (PASA), Arizona State University}{}
+      \resumeItemListStart
+        \resumeItem{Elected to lead cultural programming and community engagement initiatives for the organization}
+        \resumeItem{Organized events celebrating Filipino-American heritage and fostering a sense of belonging on campus}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
